@@ -14,8 +14,22 @@ function Car (make, model, year, mileage, person) {
   this.owner = person.name();
 }
 
+function House (type, sqft, floors, cost, owner, garageVehicle) {
+  this.type = type;
+  this.sqft = sqft;
+  this.floors = floors;
+  this.cost = cost;
+  this.owner = owner;
+  this.garageContents = garageVehicle;
+}
+
+
+
 var me = new Person('Chris', 'Hutchinson', 44);
 console.log(me.name(), me.height());
 
 var myCar = new Car('Jeep', "Wrangler", 2007, 30100, me);
 console.log (myCar.owner);
+
+var myHouse = new House('ranch', 2200, 2, 150000, me, myCar);
+console.log (myHouse.garageContents.owner);
